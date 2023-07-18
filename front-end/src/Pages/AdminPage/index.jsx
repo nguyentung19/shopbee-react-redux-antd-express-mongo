@@ -10,8 +10,11 @@ export default function AdminPage() {
   const navigate = useNavigate();
   const currentUser = useSelector((state) => state.AuthAdmin.currentUser);
 
+  console.log(currentUser);
+
+
   useEffect(() => {
-    if (currentUser || currentUser.role !== "admin") {
+    if (!currentUser || currentUser.role !== "admin") {
       navigate("/");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
