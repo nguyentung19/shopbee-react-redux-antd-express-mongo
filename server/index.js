@@ -5,7 +5,7 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const colors = require("colors/safe");
-const errorHandler = require("./app/utils/errorHandler.util");
+const errorHandler = require("./src/utils/errorHandler.util");
 require("dotenv").config();
 
 // use
@@ -24,8 +24,8 @@ mongoose
   });
 
 // Router
-app.use("/api/v1/", require("./app/routes/server"));
-app.use("/api/v1/client", require("./app/routes/client"));
+app.use("/api/v1/", require("./src/routes/server"));
+app.use("/api/v1/client", require("./src/routes/client"));
 
 // running
 app.listen(process.env.PORT, () => {
