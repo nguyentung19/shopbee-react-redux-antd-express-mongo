@@ -26,13 +26,13 @@ export default function HeaderTopLeft() {
           Kiểm tra đơn hàng
         </Link>
       </span>
-      {currentUser?.role === "admin" && (
-        <span className="header-left-item">
-          <Link to="/admin" className="header-link">
-            Vào trang quản trị
-          </Link>
-        </span>
-      )}
+
+      <span className="header-left-item">
+        <Link to="/admin" className="header-link"   disabled={currentUser?.role === "admin" ? false : true}>
+          Vào trang quản trị
+        </Link>
+      </span>
+
       {/* <span className="header-left-item">
         <Link
           to="/admin"
