@@ -10,9 +10,6 @@ export default function AdminPage() {
   const navigate = useNavigate();
   const currentUser = useSelector((state) => state.AuthAdmin.currentUser);
 
-  console.log(currentUser);
-
-
   useEffect(() => {
     if (!currentUser || currentUser.role !== "admin") {
       navigate("/");

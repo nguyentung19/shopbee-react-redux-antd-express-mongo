@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import {
   AppstoreOutlined,
   DropboxOutlined,
+  LogoutOutlined,
   ShoppingCartOutlined,
   UserOutlined,
 } from "@ant-design/icons";
@@ -29,6 +30,12 @@ const items = [
     icon: <ShoppingCartOutlined />,
     key: "/admin/cartAdminPage",
   },
+  {
+    label: "Back to homepage",
+    icon: <LogoutOutlined />,
+    key: "homepage",
+    danger: true,
+  },
 ];
 
 export default function SideMenu() {
@@ -48,7 +55,7 @@ export default function SideMenu() {
     <ConfigProvider
       theme={{
         token: {
-          borderRadius: 0
+          borderRadius: 0,
         },
       }}
     >
@@ -57,6 +64,9 @@ export default function SideMenu() {
         selectedKeys={selectedKey}
         items={items}
         onClick={(item) => {
+          if (item.key === "homepage") {
+            item.key = "/";
+          }
           navigate(item.key);
         }}
       />
