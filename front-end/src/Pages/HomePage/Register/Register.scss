@@ -1,0 +1,20 @@
+.home {
+  &-register {
+    padding: 70px 0;
+
+    &-title {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    &-form {
+      width: 400px;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 100%;
+      margin: 50px auto;
+      box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+        rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    }
+  }
+}

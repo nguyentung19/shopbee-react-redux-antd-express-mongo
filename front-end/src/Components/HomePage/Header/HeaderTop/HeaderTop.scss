@@ -1,0 +1,31 @@
+.header {
+  &-link {
+    color: white;
+
+    &:hover {
+      color: #cbd5e1;
+    }
+  }
+
+  &-top {
+    padding: 20px 0;
+    background-color: #ed502e;
+    color: white;
+  }
+
+  &-left {
+    &-item {
+      padding-right: 10px;
+      margin-right: 10px;
+      border-right: 1px solid white;
+
+      &:last-of-type {
+        border-right: none;
+      }
+    }
+
+    &-icon {
+      font-size: 18px;
+    }
+  }
+}

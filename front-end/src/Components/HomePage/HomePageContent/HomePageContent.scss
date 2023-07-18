@@ -1,0 +1,24 @@
+.home {
+  &-container {
+    background-color: #e2e8f0;
+    padding: 20px 0;
+  }
+  &-title {
+    background: white;
+    padding: 20px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  &-category {
+    &-img {
+      height: 200px;
+      width: 200px;
+      object-fit: contain;
+    }
+
+    &-meta {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.header {
+  &-bottom {
+    background-color: #ed502e;
+    padding: 20px 0;
+
+  }
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-logo {
+    width: 100px;
+  }
+
+  &-search {
+    width: 800px;
+    max-width: 100%;
+  }
+
+  &-cart-icon {
+    display: block;
+    font-size: 50px;
+    color: white;
+  }
+}
