@@ -36,6 +36,10 @@ module.exports = {
     }
   },
 
+  deleteCartsByUserId: (userId) => {
+    return cartModel.deleteMany({ user: userId });
+  },
+
   getClientOrders: (clientId) => {
     return cartModel
       .find({ user: { $in: clientId.id } })

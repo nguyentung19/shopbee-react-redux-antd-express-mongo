@@ -19,7 +19,9 @@ router.post(
 router.get(
   "/",
   asyncHandler(async (req, res) => {
+    console.log("hello world");
     const cartList = await cartModel.listItems(req.params, { task: "all" });
+    console.log(cartList);
 
     res.status(200).json({
       success: true,

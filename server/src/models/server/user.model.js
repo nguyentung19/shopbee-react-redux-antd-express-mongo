@@ -29,9 +29,13 @@ module.exports = {
     }
   },
 
-  deleteUser: (params, option) => {
+  deleteUser: async (params, option) => {
     if (option.task === "single") {
-      return userModel.deleteOne({ _id: params.id });
+      await cartModel.deleteCartsByUserId(params.id).then((result) => {
+        if (result.acknowledged === true) {
+          return userModel.deleteOne({ _id: params.id });
+        }
+      });
     }
     if (option.task === "many") {
       return userModel.deleteMany({ _id: params.id });

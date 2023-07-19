@@ -71,10 +71,10 @@ export default function UserAdmin() {
         );
       },
     },
-    {
-      title: "Password",
-      dataIndex: "password",
-    },
+    // {
+    //   title: "Password",
+    //   dataIndex: "password",
+    // },
     {
       title: "Phone",
       dataIndex: "phone",
@@ -107,7 +107,7 @@ export default function UserAdmin() {
   ];
 
   const formatColumns = columns.map((column) => {
-    const numberOfColumns = 8;
+    const numberOfColumns = 7;
 
     if (column.title !== "Delete") {
       return {

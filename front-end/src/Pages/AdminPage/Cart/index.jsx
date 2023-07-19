@@ -14,10 +14,12 @@ export default function CartAdminPage() {
   const dispatch = useDispatch();
   const { cartList } = useSelector((state) => state.CartAdmin);
   const [messageApi, contextHolder] = message.useMessage();
+  console.log(cartList);
 
   useEffect(() => {
     dispatch(actGetCartListAsync());
-  }, [dispatch]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   let cartSource = cartList.map((item, index) => {
     return {
@@ -113,6 +115,7 @@ export default function CartAdminPage() {
             align: "center",
             width: "25%",
             render: (_, value) => {
+              console.log(value);
               let user = value.user;
               user = {
                 Name: user.username,

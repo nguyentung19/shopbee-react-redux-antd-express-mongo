@@ -33,14 +33,6 @@ export default function HeaderTopLeft() {
         </Link>
       </span>
 
-      {/* <span className="header-left-item">
-        <Link
-          to="/admin"
-          className="header-link"
-        >
-          Vào trang quản trị
-        </Link>
-      </span> */}
       <span className="header-left-item">
         Kết nối
         <Link
