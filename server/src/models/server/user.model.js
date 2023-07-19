@@ -1,4 +1,5 @@
 const userModel = require("../../schemas/user.schema");
+const cartModel = require("./cart.model");
 
 module.exports = {
   checkUser: async (email) => {
